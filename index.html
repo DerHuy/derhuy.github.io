@@ -23,9 +23,11 @@
 
       function setup(){
         createCanvas(w,h)
+        fireball = loadImage("fireball.png")
       }
 
       function draw(){
+        image(fireball,w/2,h/2,100,100)
         if(keyIsDown(32)){
           //Play sound attached to boing variable
           boing.play()
