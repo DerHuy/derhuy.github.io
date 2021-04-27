@@ -94,6 +94,9 @@
         bullet2.update()
         bullet3.show()
         bullet3.update()
+        hit1 = collideRectRect(bullet1.x, bullet1.y, bullet1.w, bullet1.h, mouseX-10, mouseY-10, 20, 20)
+        hit2 = collideRectRect(bullet2.x, bullet2.y, bullet2.w, bullet2.h, mouseX-10, mouseY-10, 20, 20)
+        hit3 = collideRectRect(bullet3.x, bullet3.y, bullet3.w, bullet3.h, mouseX-10, mouseY-10, 20, 20)
         if (timer >= 20){
           bullet4.show()
           bullet4.update()
@@ -101,6 +104,9 @@
           bullet5.update()
           bullet6.show()
           bullet6.update()
+          hit4 = collideRectRect(bullet4.x, bullet4.y, bullet4.w, bullet4.h, mouseX-10, mouseY-10, 20, 20)
+          hit5 = collideRectRect(bullet5.x, bullet5.y, bullet5.w, bullet5.h, mouseX-10, mouseY-10, 20, 20)
+          hit6 = collideRectRect(bullet6.x, bullet6.y, bullet6.w, bullet6.h, mouseX-10, mouseY-10, 20, 20)
         }
         if (timer >= 40){
           bullet7.show()
@@ -109,6 +115,9 @@
           bullet8.update()
           bullet9.show()
           bullet9.update()
+          hit7 = collideRectRect(bullet7.x, bullet7.y, bullet7.w, bullet7.h, mouseX-10, mouseY-10, 20, 20)
+          hit8 = collideRectRect(bullet8.x, bullet8.y, bullet8.w, bullet8.h, mouseX-10, mouseY-10, 20, 20)
+          hit9 = collideRectRect(bullet9.x, bullet9.y, bullet9.w, bullet9.h, mouseX-10, mouseY-10, 20, 20)
         }
         if (timer >= 60){
           bullet10.show()
@@ -117,23 +126,14 @@
           bullet11.update()
           bullet12.show()
           bullet12.update()
+          hit10 = collideRectRect(bullet10.x, bullet10.y, bullet10.w, bullet10.h, mouseX-10, mouseY-10, 20, 20)
+          hit11 = collideRectRect(bullet11.x, bullet11.y, bullet11.w, bullet11.h, mouseX-10, mouseY-10, 20, 20)
+          hit12 = collideRectRect(bullet12.x, bullet12.y, bullet12.w, bullet12.h, mouseX-10, mouseY-10, 20, 20)
         }
         if (timer >= 80){
           window.alert("You Win")
           noLoop()
         }
-        hit1 = collideRectRect(bullet1.x, bullet1.y, bullet1.w, bullet1.h, mouseX-10, mouseY-10, 20, 20)
-        hit2 = collideRectRect(bullet2.x, bullet2.y, bullet2.w, bullet2.h, mouseX-10, mouseY-10, 20, 20)
-        hit3 = collideRectRect(bullet3.x, bullet3.y, bullet3.w, bullet3.h, mouseX-10, mouseY-10, 20, 20)
-        hit4 = collideRectRect(bullet4.x, bullet4.y, bullet4.w, bullet4.h, mouseX-10, mouseY-10, 20, 20)
-        hit5 = collideRectRect(bullet5.x, bullet5.y, bullet5.w, bullet5.h, mouseX-10, mouseY-10, 20, 20)
-        hit6 = collideRectRect(bullet6.x, bullet6.y, bullet6.w, bullet6.h, mouseX-10, mouseY-10, 20, 20)
-        hit7 = collideRectRect(bullet7.x, bullet7.y, bullet7.w, bullet7.h, mouseX-10, mouseY-10, 20, 20)
-        hit8 = collideRectRect(bullet8.x, bullet8.y, bullet8.w, bullet8.h, mouseX-10, mouseY-10, 20, 20)
-        hit9 = collideRectRect(bullet9.x, bullet9.y, bullet9.w, bullet9.h, mouseX-10, mouseY-10, 20, 20)
-        hit10 = collideRectRect(bullet10.x, bullet10.y, bullet10.w, bullet10.h, mouseX-10, mouseY-10, 20, 20)
-        hit11 = collideRectRect(bullet11.x, bullet11.y, bullet11.w, bullet11.h, mouseX-10, mouseY-10, 20, 20)
-        hit12 = collideRectRect(bullet12.x, bullet12.y, bullet12.w, bullet12.h, mouseX-10, mouseY-10, 20, 20)
         if (hit1==true || hit2==true || hit3==true || hit4==true || hit5==true || hit6==true || hit7==true || hit8==true || hit9==true || hit10==true || hit11==true || hit12==true){
           console.log('Death')
           window.alert('You are Dead.')
