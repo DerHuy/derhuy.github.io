@@ -120,6 +120,7 @@
         }
         if (timer >= 80){
           window.alert("You Win")
+          noLoop()
         }
         hit1 = collideRectRect(bullet1.x, bullet1.y, bullet1.w, bullet1.h, mouseX-10, mouseY-10, 20, 20)
         hit2 = collideRectRect(bullet2.x, bullet2.y, bullet2.w, bullet2.h, mouseX-10, mouseY-10, 20, 20)
@@ -135,7 +136,7 @@
         hit12 = collideRectRect(bullet12.x, bullet12.y, bullet12.w, bullet12.h, mouseX-10, mouseY-10, 20, 20)
         if (hit1==true || hit2==true || hit3==true || hit4==true || hit5==true || hit6==true || hit7==true || hit8==true || hit9==true || hit10==true || hit11==true || hit12==true){
           console.log('Death')
-          window.alert('Death')
+          window.alert('You are Dead.')
           noLoop()
         }
         if (millis() >= 1 + timer){
@@ -163,7 +164,7 @@
           rect(this.x, this.y, this.w, this.h)
         }
         this.update = function(){
-          this.x = this.x + 10
+          this.x = this.x + 15
           if (this.x > w){
             this.y = random(50, h-this.h)
             this.x = 0
@@ -181,7 +182,7 @@
           rect(this.x, this.y, this.w, this.h)
         }
         this.update = function(){
-          this.x = this.x + 10
+          this.x = this.x + 15
           if (this.x > w){
             this.y = random(50, h-this.h)
             this.x = 0
@@ -199,7 +200,7 @@
           rect(this.x, this.y, this.w, this.h)
         }
         this.update = function(){
-          this.x = this.x + 10
+          this.x = this.x + 15
           if (this.x > w){
             this.y = random(0, h-this.h)
             this.x = 0
@@ -217,7 +218,7 @@
           rect(this.x, this.y, this.w, this.h)
         }
         this.update = function(){
-          this.y = this.y + 10
+          this.y = this.y + 15
           if (this.y > h){
             this.x = random(0, w-this.w)
             this.y = 0
@@ -235,7 +236,7 @@
           rect(this.x, this.y, this.w, this.h)
         }
         this.update = function(){
-          this.y = this.y + 10
+          this.y = this.y + 15
           if (this.y > h){
             this.x = random(0, w-this.w)
             this.y = 0
@@ -253,7 +254,7 @@
           rect(this.x, this.y, this.w, this.h)
         }
         this.update = function(){
-          this.y = this.y + 10
+          this.y = this.y + 15
           if (this.y > h){
             this.x = random(0, w-this.w)
             this.y = 0
@@ -271,7 +272,7 @@
           rect(this.x, this.y, this.w, this.h)
         }
         this.update = function(){
-          this.x = this.x-10
+          this.x = this.x-15
           if (this.x < 0){
             this.y = random(50, h-this.h)
             this.x = w-this.w
@@ -289,7 +290,7 @@
           rect(this.x, this.y, this.w, this.h)
         }
         this.update = function(){
-          this.x = this.x-10
+          this.x = this.x-15
           if (this.x < 0){
             this.y = random(50, h-this.h)
             this.x = w-this.w
@@ -307,7 +308,7 @@
           rect(this.x, this.y, this.w, this.h)
         }
         this.update = function(){
-          this.x = this.x-10
+          this.x = this.x-15
           if (this.x < 0){
             this.y = random(50, h-this.h)
             this.x = w-this.w
@@ -325,7 +326,7 @@
           rect(this.x, this.y, this.w, this.h)
         }
         this.update = function(){
-          this.y = this.y - 10
+          this.y = this.y - 15
           if (this.y < 0){
             this.x = random(0, w-this.w)
             this.y = h-this.h
@@ -343,7 +344,7 @@
           rect(this.x, this.y, this.w, this.h)
         }
         this.update = function(){
-          this.y = this.y - 10
+          this.y = this.y - 15
           if (this.y < 0){
             this.x = random(0, w-this.w)
             this.y = h-this.h
@@ -361,7 +362,7 @@
           rect(this.x, this.y, this.w, this.h)
         }
         this.update = function(){
-          this.y = this.y - 10
+          this.y = this.y - 15
           if (this.y < 0){
             this.x = random(0, w-this.w)
             this.y = h-this.h
