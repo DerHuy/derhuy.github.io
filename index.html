@@ -31,6 +31,10 @@
       var bullet10
       var bullet11
       var bullet12
+      var bullet13
+      var bullet14
+      var bullet15
+      var bullet16
       var timer = 0
       var hit1 = false
       var hit2 = false
@@ -44,6 +48,10 @@
       var hit10 = false
       var hit11 = false
       var hit12 = false
+      var hit13 = false
+      var hit14 = false
+      var hit15 = false
+      var hit16 = false
       function gid(e) {
         return document.getElementById(e);
       }
@@ -81,6 +89,10 @@
         bullet10 = new bullet10()
         bullet11 = new bullet11()
         bullet12 = new bullet12()
+        bullet13 = new bullet13()
+        bullet14 = new bullet14()
+        bullet15 = new bullet15()
+        bullet16 = new bullet16()
       }
 
       function draw(){
@@ -94,9 +106,12 @@
         bullet2.update()
         bullet3.show()
         bullet3.update()
+        bullet13.show()
+        bullet13.update()
         hit1 = collideRectRect(bullet1.x, bullet1.y, bullet1.w, bullet1.h, mouseX-10, mouseY-10, 20, 20)
         hit2 = collideRectRect(bullet2.x, bullet2.y, bullet2.w, bullet2.h, mouseX-10, mouseY-10, 20, 20)
         hit3 = collideRectRect(bullet3.x, bullet3.y, bullet3.w, bullet3.h, mouseX-10, mouseY-10, 20, 20)
+        hit13 = collideRectRect(bullet13.x, bullet13.y, bullet13.w, bullet13.h, mouseX-10, mouseY-10, 20, 20)
         if (timer >= 20){
           bullet4.show()
           bullet4.update()
@@ -104,9 +119,12 @@
           bullet5.update()
           bullet6.show()
           bullet6.update()
+          bullet14.show()
+          bullet14.update()
           hit4 = collideRectRect(bullet4.x, bullet4.y, bullet4.w, bullet4.h, mouseX-10, mouseY-10, 20, 20)
           hit5 = collideRectRect(bullet5.x, bullet5.y, bullet5.w, bullet5.h, mouseX-10, mouseY-10, 20, 20)
           hit6 = collideRectRect(bullet6.x, bullet6.y, bullet6.w, bullet6.h, mouseX-10, mouseY-10, 20, 20)
+          hit14 = collideRectRect(bullet14.x, bullet14.y, bullet14.w, bullet14.h, mouseX-10, mouseY-10, 20, 20)
         }
         if (timer >= 40){
           bullet7.show()
@@ -115,9 +133,12 @@
           bullet8.update()
           bullet9.show()
           bullet9.update()
+          bullet15.show()
+          bullet15.update()
           hit7 = collideRectRect(bullet7.x, bullet7.y, bullet7.w, bullet7.h, mouseX-10, mouseY-10, 20, 20)
           hit8 = collideRectRect(bullet8.x, bullet8.y, bullet8.w, bullet8.h, mouseX-10, mouseY-10, 20, 20)
           hit9 = collideRectRect(bullet9.x, bullet9.y, bullet9.w, bullet9.h, mouseX-10, mouseY-10, 20, 20)
+          hit15 = collideRectRect(bullet15.x, bullet15.y, bullet15.w, bullet15.h, mouseX-10, mouseY-10, 20, 20)
         }
         if (timer >= 60){
           bullet10.show()
@@ -126,9 +147,12 @@
           bullet11.update()
           bullet12.show()
           bullet12.update()
+          bullet16.show()
+          bullet16.update()
           hit10 = collideRectRect(bullet10.x, bullet10.y, bullet10.w, bullet10.h, mouseX-10, mouseY-10, 20, 20)
           hit11 = collideRectRect(bullet11.x, bullet11.y, bullet11.w, bullet11.h, mouseX-10, mouseY-10, 20, 20)
           hit12 = collideRectRect(bullet12.x, bullet12.y, bullet12.w, bullet12.h, mouseX-10, mouseY-10, 20, 20)
+          hit16 = collideRectRect(bullet16.x, bullet16.y, bullet16.w, bullet16.h, mouseX-10, mouseY-10, 20, 20)
         }
         if (timer >= 80){
           window.alert("You Win")
@@ -155,6 +179,7 @@
       }
 
       function bullet1(){
+        //use set variables for future imaging
         this.w = 60
         this.h = 30
         this.x = 0
@@ -182,7 +207,7 @@
           rect(this.x, this.y, this.w, this.h)
         }
         this.update = function(){
-          this.x = this.x + 15
+          this.x = this.x + 10
           if (this.x > w){
             this.y = random(50, h-this.h)
             this.x = 0
@@ -200,7 +225,7 @@
           rect(this.x, this.y, this.w, this.h)
         }
         this.update = function(){
-          this.x = this.x + 15
+          this.x = this.x + 5
           if (this.x > w){
             this.y = random(0, h-this.h)
             this.x = 0
@@ -236,7 +261,7 @@
           rect(this.x, this.y, this.w, this.h)
         }
         this.update = function(){
-          this.y = this.y + 15
+          this.y = this.y + 10
           if (this.y > h){
             this.x = random(0, w-this.w)
             this.y = 0
@@ -254,7 +279,7 @@
           rect(this.x, this.y, this.w, this.h)
         }
         this.update = function(){
-          this.y = this.y + 15
+          this.y = this.y + 5
           if (this.y > h){
             this.x = random(0, w-this.w)
             this.y = 0
@@ -290,7 +315,7 @@
           rect(this.x, this.y, this.w, this.h)
         }
         this.update = function(){
-          this.x = this.x-15
+          this.x = this.x-10
           if (this.x < 0){
             this.y = random(50, h-this.h)
             this.x = w-this.w
@@ -308,7 +333,7 @@
           rect(this.x, this.y, this.w, this.h)
         }
         this.update = function(){
-          this.x = this.x-15
+          this.x = this.x-5
           if (this.x < 0){
             this.y = random(50, h-this.h)
             this.x = w-this.w
@@ -344,7 +369,7 @@
           rect(this.x, this.y, this.w, this.h)
         }
         this.update = function(){
-          this.y = this.y - 15
+          this.y = this.y - 10
           if (this.y < 0){
             this.x = random(0, w-this.w)
             this.y = h-this.h
@@ -362,7 +387,7 @@
           rect(this.x, this.y, this.w, this.h)
         }
         this.update = function(){
-          this.y = this.y - 15
+          this.y = this.y - 5
           if (this.y < 0){
             this.x = random(0, w-this.w)
             this.y = h-this.h
@@ -370,6 +395,78 @@
         }
       }
 
+       function bullet13(){
+        //use set variables for future imaging
+        this.w = 60
+        this.h = 30
+        this.x = 0
+        this.y = random(0, h-this.h)
+        this.show = function(){
+          fill(color('red'))
+          rect(this.x, this.y, this.w, this.h)
+        }
+        this.update = function(){
+          this.x = this.x + 20
+          if (this.x > w){
+            this.y = random(50, h-this.h)
+            this.x = 0
+          }
+        }
+      }
+
+      function bullet14(){
+        this.w = 30
+        this.h = 60
+        this.x = random(0, w-this.w)
+        this.y = 0
+        this.show = function(){
+          fill(color('red'))
+          rect(this.x, this.y, this.w, this.h)
+        }
+        this.update = function(){
+          this.y = this.y + 20
+          if (this.y > h){
+            this.x = random(0, w-this.w)
+            this.y = 0
+          }
+        }
+      }
+
+      function bullet15(){
+        this.w = 60
+        this.h = 30
+        this.x = w-this.w
+        this.y = random(0, h-this.h)
+        this.show = function(){
+          fill(color('red'))
+          rect(this.x, this.y, this.w, this.h)
+        }
+        this.update = function(){
+          this.x = this.x-20
+          if (this.x < 0){
+            this.y = random(50, h-this.h)
+            this.x = w-this.w
+          }
+        }
+      }
+
+      function bullet16(){
+        this.w = 30
+        this.h = 60
+        this.x = random(0, w-this.w)
+        this.y = h-this.h
+        this.show = function(){
+          fill(color('red'))
+          rect(this.x, this.y, this.w, this.h)
+        }
+        this.update = function(){
+          this.y = this.y - 20
+          if (this.y < 0){
+            this.x = random(0, w-this.w)
+            this.y = h-this.h
+          }
+        }
+      }
       </script>
       <h1 id='timmy' style="font-size:15px; margin:0; "></h1>
   </body>
